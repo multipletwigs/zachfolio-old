@@ -6,7 +6,6 @@ import reportWebVitals from './reportWebVitals';
 import { ChakraProvider, ColorModeScript } from "@chakra-ui/react"
 import theme from './theme'
 import '@fontsource/quicksand'
-import '@fontsource/quicksand'
 
 ReactDOM.render(
   <React.StrictMode>

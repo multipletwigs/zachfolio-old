@@ -2,6 +2,7 @@ import { Text, Button, Flex, useColorMode } from "@chakra-ui/react";
 import { SunIcon, MoonIcon } from '@chakra-ui/icons'
 import ThemeContext from '../Context/ThemeContext'
 
+
 const ProfileHeader = () => {
     const { colorMode, toggleColorMode } = useColorMode();
 
