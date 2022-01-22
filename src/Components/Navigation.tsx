@@ -6,7 +6,7 @@ const Navigation = () => {
         h='5vh' 
         w='100px' 
         flexDirection={'column'} 
-        position={'absolute'}
+        position={'fixed'}
         justifyContent={'center'}
         top='50%'
         left='15%'
