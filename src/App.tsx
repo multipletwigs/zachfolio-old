@@ -1,5 +1,6 @@
 import { Box } from '@chakra-ui/react';
 import './App.css';
+import ContactForm from './Components/ContactForm';
 import Home from './Components/Home';
 import Navigation from './Components/Navigation';
 import ProfileCard from './Components/ProfileCard';
@@ -13,6 +14,7 @@ function App() {
       }}}>
       <Home></Home>
       <ProjectsView></ProjectsView>
+      <ContactForm></ContactForm>
     </Box>
   );
 }

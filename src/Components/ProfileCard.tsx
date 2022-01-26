@@ -2,7 +2,6 @@ import { Center, Box, Flex, Image, Text } from "@chakra-ui/react";
 import ProfileHeader from "./ProfileHeader";
 import ThemeContext from "../Context/ThemeContext";
 import ProfileSection from "./ProfileSection";
-import { StarIcon } from "@chakra-ui/icons";
 import Typewriter from "typewriter-effect";
 import ProfileSectionTimeline from "./ProfileSectionTimeline";
 
@@ -11,7 +10,7 @@ const ProfileCard = () => {
   return (
     <Center w="100vw" h="100vh" bg={ThemeContext().bg} flexDirection={"column"}>
       <Box w={["80%", "85%", '60%', "40%"]} h="auto" rounded="2xl">
-        <ProfileHeader></ProfileHeader>
+        <ProfileHeader toggleButton={true} text={'zachfolio'}></ProfileHeader>
         <Flex
           w="100%"
           h="100%"
