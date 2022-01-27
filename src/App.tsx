@@ -11,7 +11,10 @@ function App() {
     <Box css={{
       '&::-webkit-scrollbar-thumb': {
         display:'none',
-      }}}>
+      },
+      scrollSnapType:'y'  
+      }}>
+      <Navigation></Navigation>
       <Home></Home>
       <ProjectsView></ProjectsView>
       <ContactForm></ContactForm>

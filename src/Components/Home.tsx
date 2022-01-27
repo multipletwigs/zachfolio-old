@@ -5,11 +5,7 @@ import ProfileCard from "./ProfileCard";
 
 const Home = () => {
     return (
-        <Box css={{
-            '&::-webkit-scrollbar': {
-              display:'none',
-            }}}>
-            <Navigation></Navigation>
+        <Box id="profile-card">
             <ProfileCard></ProfileCard>
         </Box>
     )

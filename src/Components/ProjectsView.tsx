@@ -5,14 +5,20 @@ import {DiDjango} from "react-icons/di"
 
 
 const ProjectsView = () => {
+
   return (
-    <Center h="100vh" flexDirection={"column"}>
+    <Center 
+    id="projects"
+    h="100vh" 
+    flexDirection={"column"} 
+    scrollSnapAlign={'start'}
+    >
       <Flex w={["80%", "85%", "60%", "40%"]} flexDirection={'column'}>
         <ProfileHeader toggleButton={false} text="Work"></ProfileHeader>
         <Flex flexDirection={'column'} gap={'2'}>
             <ProjectCard 
             companyTitle="UReview" 
-            description="A student feedback review system for Monash University Malaysia"
+            description="A unit feedback review system for Monash University Malaysia. It is a forum like platform where students can post reviews about anything at all with regards to unit satisfaction."
             icons={[DiDjango, DiDjango, DiDjango]}></ProjectCard>
             <ProjectCard 
             companyTitle="Vaccu" 
