@@ -27,6 +27,7 @@
     "rxjs": "^7.5.2",
     "save-dev": "0.0.1-security",
     "sweetalert2": "^11.3.8",
+    "three": "^0.137.4",
     "typescript": "^4.4.2",
     "typewriter-effect": "^2.18.2",
     "web-vitals": "^2.1.0"

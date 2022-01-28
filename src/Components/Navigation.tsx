@@ -1,6 +1,5 @@
-import { Box, Container, Flex,  Text } from "@chakra-ui/react"
+import { Box, Flex,  Text } from "@chakra-ui/react"
 import { useState } from "react"
-import { fromEvent, map, Observable, scan } from 'rxjs'
 import { Link } from "react-scroll"
 
 interface NavItem {
@@ -15,7 +14,7 @@ interface screenInfo {
 }
 
 const initialState: screenInfo = {
-    screenHeight: window.innerWidth,
+    screenHeight: Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0),
     currentSection: 0,
     currentPos: 0
 }
@@ -31,29 +30,17 @@ const navItems: NavItem[] = [{
     name: "Profile"
 }]
 
+
 const Navigation = () => {
 
-    const $scroll = 
-        fromEvent(document, 'scroll').pipe(
-            scan(reduceState, initialState)
-        ).subscribe(changeNavState)
+    //Never use rxjs within a component, switch to a context instead. 
+    //If you're going to use rxjs might as well use angular lmao
 
-    function reduceState(s: screenInfo){
-
-        const calcSection = Math.floor(s.currentPos / s.screenHeight)
-
-        return ({
-            ...s,
-            currentSection: calcSection,
-            currentPos: window.scrollY
-        })
-    }
-
-    function changeNavState(s: screenInfo){
-        const elem = document.getElementById(navItems[s.currentSection].idValue)
-        console.log(elem)
-        return elem
-    }
+    const[currSection, setSection] = useState(() => initialState.currentSection)
+    const reduceState = () => [
+        setSection(Math.round(window.scrollY / initialState.screenHeight))
+    ]
+    window.addEventListener('scroll', reduceState)
 
     return (
         <Flex 
@@ -71,11 +58,18 @@ const Navigation = () => {
             </Box>
             {navItems.map((value, index) => {
                 return (<Link 
+                key={index}
                 to={value.idValue}
                 spy={true} 
                 smooth={true} 
-                duration={500}>
-                    <Box w="fit-content" cursor="pointer">
+                duration={500}
+                >
+                    <Box 
+                    w="fit-content" 
+                    cursor="pointer"
+                    textColor={index === currSection ? "white" : "gray"}
+                    transition={"all 0.2s"}
+                    >
                         <Text>{value.name}</Text>
                     </Box>
                 </Link>)
