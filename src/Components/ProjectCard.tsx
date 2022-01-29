@@ -8,16 +8,17 @@ const ProjectCard = ({
   description,
   bordColor,
   icons,
-  navButton
+  navButton,
+  badge = undefined, //set a default value
 }: {
   companyTitle: string;
   description: JSX.Element;
   bordColor: string;
   icons: IconType[];
   navButton: JSX.Element; 
-  
+  badge?: JSX.Element[];
 }) => {
-  const iconLists = icons.map((icon) => <Icon as={icon} w={6} h={6}></Icon>);
+  const iconLists = icons.map((icon) => <Icon as={icon} w={[6,6,8,10,10]} h={[6,6,8,10,10]}></Icon>);
 
   return (
     <Flex
@@ -40,12 +41,16 @@ const ProjectCard = ({
     >
       <Box w="100%">
         <Text 
+        width="100%"
         fontSize={"2xl"} 
         fontWeight={700} 
+        display="flex"
+        flexDirection={'column'}
         >
           {companyTitle}
+          <Flex gap="2">{badge}</Flex>
         </Text>
-        <Text>{description}</Text>
+        <Text fontWeight="400" mt="5">{description}</Text>
         <Flex gap="2" mt="5" alignItems={'center'}>
           {iconLists}
           {navButton}

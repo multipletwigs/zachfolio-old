@@ -39,7 +39,7 @@ const ProfileCard = () => {
                 <Box height={'3vh'}>
                 <Typewriter
                   options={{
-                    strings: ['Student at Monash University Malaysia.', 'Fullstack Project Manager at UReview.', 'Fullstack developer at Vaccu.', 'Frontend Developer at Eureka.'],
+                    strings: ['I am a developer.', 'I am an artist.', 'I am a student.', 'I am a teacher.'],
                     autoStart: true,
                     loop: true,
                   }}

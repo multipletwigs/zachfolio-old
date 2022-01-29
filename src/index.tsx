@@ -3,8 +3,10 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { ChakraProvider, ColorModeScript } from "@chakra-ui/react"
+import { ChakraProvider } from "@chakra-ui/react"
 import theme from './theme'
+import 'sweetalert2'
+import 'sweetalert2-react-content'
 import '@fontsource/quicksand'
 
 ReactDOM.render(

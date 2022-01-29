@@ -1,6 +1,7 @@
 import { Box, Flex,  Text } from "@chakra-ui/react"
 import { useState } from "react"
 import { Link } from "react-scroll"
+import ThemeContext from "../Context/ThemeContext"
 
 interface NavItem {
     idValue: string, 
@@ -52,7 +53,7 @@ const Navigation = () => {
     return (
         <Flex 
         h='5vh' 
-        w='100px' 
+        w='125px' 
         flexDirection={'column'} 
         position={'fixed'}
         justifyContent={'center'}
@@ -75,10 +76,10 @@ const Navigation = () => {
                     w="fit-content" 
                     cursor="pointer"
                     fontWeight={'700'}
-                    textColor={index === currSection ? "white" : "gray"}
+                    textColor={index === currSection ? ThemeContext().text : "gray"}
                     transition={"all 0.2s"}
                     >
-                        <Text>{value.name}</Text>
+                        <Text fontSize="1.2em">{value.name}</Text>
                     </Box>
                 </Link>)
             })}
