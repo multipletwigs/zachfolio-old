@@ -3,6 +3,7 @@ import ProfileHeader from "./ProfileHeader";
 import ProjectCard from "./ProjectCard";
 import { SiScratch } from "react-icons/si";
 import { ArrowForwardIcon } from "@chakra-ui/icons";
+import ThemeContext from "../Context/ThemeContext";
 
 const NonProjectsView = () => {
   const buttons = ["About Raspi Sekolah", "About Italki"].map((about) => (
@@ -26,6 +27,7 @@ const NonProjectsView = () => {
       h="100vh"
       flexDirection={"column"}
       scrollSnapAlign={"start"}
+      bgColor={ThemeContext().bg1}
     >
       <Flex w={["80%", "85%", "60%", "40%"]} flexDirection={"column"}>
         <ProfileHeader

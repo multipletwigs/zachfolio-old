@@ -4,6 +4,7 @@ import ProjectCard from "./ProjectCard";
 import { DiDjango, DiAngularSimple, DiReact } from "react-icons/di";
 import { SiChakraui, SiTailwindcss } from "react-icons/si";
 import { ArrowForwardIcon } from "@chakra-ui/icons";
+import ThemeContext from "../Context/ThemeContext";
 
 const ProjectsView = () => {
   const buttons: JSX.Element[] = [
@@ -33,6 +34,7 @@ const ProjectsView = () => {
       id="projects"
       h="100vh"
       flexDirection={"column"}
+      bgColor={ThemeContext().bg1}
     >
       <Flex w={["80%", "85%", "60%", "40%"]} flexDirection={"column"}>
         <ProfileHeader toggleButton={false} text="Work"></ProfileHeader>

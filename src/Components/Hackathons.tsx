@@ -12,6 +12,7 @@ import {
 import { ArrowForwardIcon } from "@chakra-ui/icons";
 import Swal, { SweetAlertResult } from "sweetalert2";
 import withReactContent from "sweetalert2-react-content";
+import ThemeContext from "../Context/ThemeContext";
 
 interface HackathonDesc {
   title: JSX.Element;
@@ -90,8 +91,10 @@ const HackathonsView = () => {
     <Center
       id="hackathons"
       h="100vh"
+      w="auto"
       flexDirection={"column"}
       scrollSnapAlign={"start"}
+      bgColor={ThemeContext().bg1}
     >
       <Flex w={["80%", "85%", "60%", "40%"]} flexDirection={"column"}>
         <ProfileHeader

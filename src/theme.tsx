@@ -6,7 +6,7 @@ import '@fontsource/quicksand'
 
 // 2. Add your color mode config
 const config: ThemeConfig = {
-  initialColorMode: 'light',
+  initialColorMode: 'dark',
   useSystemColorMode: false,
 }
 
