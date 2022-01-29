@@ -8,7 +8,6 @@ const TimelineBox = (props: {
     year: string,
     icon: IconType
 }) => {
-    const BoxMotion = motion(Box)
     const IconMotion = motion(IconButton)
     const [hovered, setHover] = useState(false);
 

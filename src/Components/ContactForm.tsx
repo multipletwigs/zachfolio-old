@@ -11,6 +11,7 @@ const findMeOn = [
 const ContactForm = () => {
   return (
     <Box
+    id="contact-me"
       h="100vh"
       display="flex"
       justifyContent={"center"}

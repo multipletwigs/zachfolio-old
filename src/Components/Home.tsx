@@ -1,6 +1,4 @@
-import { Box, Container, Flex } from "@chakra-ui/react"
-import ContactForm from "./ContactForm";
-import Navigation from "./Navigation";
+import { Box } from "@chakra-ui/react"
 import ProfileCard from "./ProfileCard";
 
 const Home = () => {

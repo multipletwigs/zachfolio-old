@@ -23,11 +23,18 @@ const navItems: NavItem[] = [{
     idValue: "profile-card",
     name: "Profile"
 },{
-    idValue: "profile-card",
-    name: "Profile"
+    idValue: "projects",
+    name: "Work (1)"
 },{
-    idValue: "profile-card",
-    name: "Profile"
+    idValue: "non-projects",
+    name: "Work (2)"
+},{
+    idValue: "hackathons",
+    name: "Hackathons"
+},
+{
+    idValue: "contact-me",
+    name: "Contact me"
 }]
 
 
@@ -50,10 +57,10 @@ const Navigation = () => {
         position={'fixed'}
         justifyContent={'center'}
         top='50%'
-        left='15%'
-        display={['none','none','none','flex']}
+        left={['none','none','none','5%','15%']}
+        display={['none','none','none','flex','flex']}
         >
-            <Box p='1' border='1px' borderColor='gray.200' textAlign={'center'}>
+            <Box p='1' mb="5" border='1px' borderColor='gray.200' textAlign={'center'}>
                 zachfolio
             </Box>
             {navItems.map((value, index) => {
@@ -67,6 +74,7 @@ const Navigation = () => {
                     <Box 
                     w="fit-content" 
                     cursor="pointer"
+                    fontWeight={'700'}
                     textColor={index === currSection ? "white" : "gray"}
                     transition={"all 0.2s"}
                     >

@@ -9,7 +9,7 @@ const ProfileCard = () => {
 
   return (
     <Center w="100vw" h="100vh" bg={ThemeContext().bg} flexDirection={"column"}>
-      <Box w={["80%", "85%", '60%', "40%"]} h="auto" rounded="2xl">
+      <Box w={["90%", "80%", "85%", '60%', "40%"]} h="auto" rounded="2xl">
         <ProfileHeader toggleButton={true} text={'zachfolio'}></ProfileHeader>
         <Flex
           w="100%"
@@ -18,7 +18,7 @@ const ProfileCard = () => {
           rounded="2xl"
           p={[3, 5, "5%"]}
           flexDirection={"column"}
-          gap="5"
+          gap="2"
         >
           <Flex align="center" gap="5">
             <Image
