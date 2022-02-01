@@ -1,4 +1,4 @@
-import { Badge, Button, Center, Flex, Text } from "@chakra-ui/react";
+import { Badge, Button, Center, Flex, Link, Text, Image } from "@chakra-ui/react";
 import ProfileHeader from "./ProfileHeader";
 import ProjectCard from "./ProjectCard";
 import {
@@ -14,52 +14,83 @@ import Swal, { SweetAlertResult } from "sweetalert2";
 import withReactContent from "sweetalert2-react-content";
 import ThemeContext from "../Context/ThemeContext";
 
-interface HackathonDesc {
-  title: JSX.Element;
-  desc: JSX.Element;
-  link: string;
-}
+import Alerts from "./Alerts"
+import CardDesc from "../Interfaces/CardDesc";
 
-const hackathonItem: HackathonDesc[] = [
-  {
+
+const hackathonItem: CardDesc[] = [
+  { 
+    location: "QuickPark Repo", 
     title: (
-      <Text fontWeight={700}>
+      <Text fontWeight={700} color="black">
         Quick
-        <Text as="span" color="red">
+        <Text as="span" color="#FF807E">
           Park
         </Text>
       </Text>
     ),
     desc: (
-      <Text>
-        This app uses Angular for frontend and Firebase as backend. We got into
-        a finalist position but unfortunately did not win the competition.
-      </Text>
+      <Flex 
+      flexDirection={'column'} justifyContent={'center'} alignItems={'center'} gap="5">
+        <Image 
+        w={["30%", "30%", "20%", "30%"]}
+        mb="3"
+        src={require("./assets/QuickPark-Logo.png")}></Image>
+        <Text fontWeight={400} color="black" textAlign={'left'}>
+          We have a small write up through our GitHub Repo! 
+          <br></br>
+          <br></br>
+          Me and another member spent a few days coding the whole project out. I'm super proud of this product!
+          <br></br>
+          <br></br>
+          Please do visit our 
+          <Link 
+          color="#FF807E" 
+          fontWeight={700} 
+          textDecorationLine={'2px'} 
+          target="_blank"
+          href="https://www.youtube.com/watch?v=jZ9qwAiZfdw"> YouTube submissions </Link> 
+          to learn more about QuickPark.
+        </Text>
+      </Flex>
     ),
-    link: "",
+    link: "https://github.com/QuickPark-Monash/quickpark-monash-mobile",
   },
   {
+    location: "our YouTube submission",
     title: <Text fontWeight={700}>Huddle</Text>,
     desc: (
-      <Text>
-        This app was the first submission for my first ever hackathon. Made with
-        only HTML5 and CSS3. I can only say that I've grown a lot as a fullstack
-        developer.
-      </Text>
+      <Flex 
+      flexDirection={'column'} justifyContent={'center'} alignItems={'center'} gap="5">
+        <Image 
+        w={["30%", "30%", "20%", "30%"]}
+        mb="3"
+        src={require("./assets/relationship.png")}></Image>
+        <Text fontWeight={400} color="black" textAlign={'left'}>
+          This was my very first attempt at a hackathon! The results were not pretty, but it was an entry-point to my goal of freelancing 😇
+          <br></br>
+          <br></br>
+          I'm turning this idea into a full-fledged mobile app in the very near future. So stay tuned! Connect with me if you want to know more 🦊
+        </Text>
+      </Flex>
     ),
-    link: "",
+    link: "https://youtu.be/RJY7I80WwNo",
   },
 ];
 
 //Lazily evaluated functions
-const popUpItems: (() => Promise<SweetAlertResult<any>>)[] = hackathonItem.map(
+const popUpItems: (() => void)[] = hackathonItem.map(
   (value) => {
-    const reactSwal = withReactContent(Swal);
+    const reactAlert = new Alerts()
     return () =>
-      reactSwal.fire({
-        title: value.title,
-        html: value.desc,
-      });
+      reactAlert.cardNotice(value.location, value.desc, value.title).then((buttonRes) => {
+        if(buttonRes.isConfirmed) {
+          window.open(
+            value.link,
+            '_blank'
+          );
+      }
+    })
   }
 );
 
@@ -99,7 +130,7 @@ const HackathonsView = () => {
       <Flex w={["80%", "85%", "60%", "40%"]} flexDirection={"column"}>
         <ProfileHeader
           toggleButton={false}
-          text="Hackathons for fun!"
+          text="🦩 Hackathons!"
         ></ProfileHeader>
         <Flex flexDirection={"column"} gap={"2"}>
           <ProjectCard

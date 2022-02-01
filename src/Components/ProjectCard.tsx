@@ -15,7 +15,7 @@ const ProjectCard = ({
   description: JSX.Element;
   bordColor: string;
   icons: IconType[];
-  navButton: JSX.Element; 
+  navButton?: JSX.Element; 
   badge?: JSX.Element[];
 }) => {
   const iconLists = icons.map((icon) => <Icon as={icon} w={[6,6,8,10,10]} h={[6,6,8,10,10]}></Icon>);

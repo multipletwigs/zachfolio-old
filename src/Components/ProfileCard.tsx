@@ -4,7 +4,7 @@ import ThemeContext from "../Context/ThemeContext";
 import ProfileSection from "./ProfileSection";
 import Typewriter from "typewriter-effect";
 import ProfileSectionTimeline from "./ProfileSectionTimeline";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 
 const ProfileCard = () => {
   const CenterMotion = motion(Center);

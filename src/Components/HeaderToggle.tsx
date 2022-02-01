@@ -19,7 +19,7 @@ const ToggleHeader = () => {
       backgroundColor={ThemeContext().bg1Blur}
     >
       <Box w={["90%", "80%", "85%", "60%", "40%"]} display="flex" alignItems={"center"} justifyContent={"center"}>
-      <Text fontSize="4xl" fontWeight={700} textColor={ThemeContext().text}>zachfolio</Text>
+      <Text fontSize={['2xl','2xl','3xl','4xl']} fontWeight={700} textColor={ThemeContext().text}>zachfolio</Text>
       <Button
         aria-label="Toggle Light or Dark Mode"
         onClick={toggleColorMode}
