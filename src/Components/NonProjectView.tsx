@@ -27,7 +27,7 @@ const NonProjectsView = () => {
       h="100vh"
       flexDirection={"column"}
       scrollSnapAlign={"start"}
-      bgColor={ThemeContext().bg1}
+      bgColor={ThemeContext().bg}
     >
       <Flex w={["80%", "85%", "60%", "40%"]} flexDirection={"column"}>
         <ProfileHeader

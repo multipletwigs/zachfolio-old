@@ -34,7 +34,7 @@ const ProjectsView = () => {
       id="projects"
       h="100vh"
       flexDirection={"column"}
-      bgColor={ThemeContext().bg1}
+      bgColor={ThemeContext().bg}
     >
       <Flex w={["80%", "85%", "60%", "40%"]} flexDirection={"column"}>
         <ProfileHeader toggleButton={false} text="Work"></ProfileHeader>

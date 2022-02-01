@@ -94,7 +94,7 @@ const HackathonsView = () => {
       w="auto"
       flexDirection={"column"}
       scrollSnapAlign={"start"}
-      bgColor={ThemeContext().bg1}
+      bgColor={ThemeContext().bg}
     >
       <Flex w={["80%", "85%", "60%", "40%"]} flexDirection={"column"}>
         <ProfileHeader

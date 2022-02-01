@@ -36,7 +36,7 @@ const ProjectCard = ({
       borderColor="transparent"
       transition={"all 0.2s"}
       p="5"
-      bg={ThemeContext().bg}
+      bg={ThemeContext().bg1}
       fontWeight={700}
     >
       <Box w="100%">
