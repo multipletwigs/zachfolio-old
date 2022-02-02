@@ -14,7 +14,7 @@ import ProfileHeader from "./ProfileHeader";
 const ContactForm = () => {
   return (
     
-    <Center w="100vw" h="100vh" bg={ThemeContext().bg} flexDirection={"column"}>
+    <Center w="100vw" h="100vh" bg={ThemeContext().bg} flexDirection={"column"} id="contact-me">
       <Box w={["90%", "80%", "85%", '60%', "40%"]} h="auto" rounded="2xl">
         <ProfileHeader toggleButton={false} text="📱 Contact me"></ProfileHeader>
       </Box>
