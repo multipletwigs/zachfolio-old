@@ -14,7 +14,7 @@ const nonProjectItem: CardDesc[] = [
     location: "UReview", 
     title: (
       <Text fontWeight={700} color="black">
-        Raspi Sekolah
+        UReview
       </Text>
     ),
     desc: (

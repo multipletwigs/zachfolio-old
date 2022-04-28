@@ -10,8 +10,6 @@ import {
 } from "react-icons/si";
 
 import { ArrowForwardIcon } from "@chakra-ui/icons";
-import Swal, { SweetAlertResult } from "sweetalert2";
-import withReactContent from "sweetalert2-react-content";
 import ThemeContext from "../Context/ThemeContext";
 
 import Alerts from "./Alerts"
