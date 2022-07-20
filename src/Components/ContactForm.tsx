@@ -14,7 +14,7 @@ import ProfileHeader from "./ProfileHeader";
 const ContactForm = () => {
   return (
     
-    <Center w="100vw" h="100vh" bg={ThemeContext().bg} flexDirection={"column"} id="contact-me">
+    <Center w="100vw" minH="100vh" bg={ThemeContext().bg} flexDirection={"column"} id="contact-me">
       <Box w={["90%", "80%", "85%", '60%', "40%"]} h="auto" rounded="2xl">
         <ProfileHeader toggleButton={false} text="📱 Contact me"></ProfileHeader>
       </Box>
@@ -34,7 +34,7 @@ const ContactForm = () => {
         mb="3"
         rounded={'full'}
         src={require("./assets/zach.png")}></Image>
-      <Text textAlign={'center'}>That's me up there! Enough about me, it's time for you to introduce yourself! I believe strongly in collaboration, if you have an idea that you would like to it into reality with, contact me! I'm sure we can make a great team :)</Text>
+      <Text textAlign={'center'}>That's me up there! Enough about me, it's time for you to introduce yourself! I believe strongly in collaboration, if you have an idea that you would like turn it into reality, contact me! I'm sure we can make a great team :)</Text>
       <Flex gap="5" justifyContent={'center'} alignItems={'center'}>
         <Link href="mailto:lkho0007@student.monash.edu?subject=Mail from Zachfolio!"><CgMail size="45"></CgMail></Link>
         <Link href="https://www.instagram.com/afewsadtwigs/"><SiInstagram size="30"></SiInstagram></Link>

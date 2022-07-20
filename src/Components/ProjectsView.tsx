@@ -97,7 +97,7 @@ const ProjectsView = () => {
   return (
     <Center
       id="projects"
-      h="100vh"
+      minH="100vh"
       flexDirection={"column"}
       bgColor={ThemeContext().bg}
     >
@@ -118,7 +118,7 @@ const ProjectsView = () => {
               </Text>
             }
             bordColor="#7E8CE0"
-            icons={[DiAngularSimple, DiDjango, ImStatsBars]}
+            icons={[DiAngularSimple, DiReact, DiDjango, ImStatsBars]}
             navButton={buttons[0]}
             badge={badges[0]}
           ></ProjectCard>

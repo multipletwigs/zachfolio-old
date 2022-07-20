@@ -1,5 +1,4 @@
 import { Center, Box, Flex, Image, Text } from "@chakra-ui/react";
-import ProfileHeader from "./ProfileHeader";
 import ThemeContext from "../Context/ThemeContext";
 import ProfileSection from "./ProfileSection";
 import Typewriter from "typewriter-effect";
@@ -12,7 +11,7 @@ const ProfileCard = () => {
   return (
     <CenterMotion
       w="100vw"
-      h="100vh"
+      minH="100vh"
       bg={ThemeContext().bg}
       flexDirection={"column"}
     >

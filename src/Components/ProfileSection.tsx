@@ -16,7 +16,7 @@ const ProfileSection = () => {
       <Text fontWeight={600} fontSize={["0.9em", "1em", "1em", "lg"]} mt="2" textAlign={'justify'}>
         Zach is currently a{" "}
         <Text as="span" color="#36C7D0">
-          Year 2 student at Monash University
+          Year 3 student at Monash University
         </Text>{" "}
         who enjoys different technologies such as {" "}
         <Text as="span" color="#4ACFAC">

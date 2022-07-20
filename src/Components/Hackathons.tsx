@@ -119,7 +119,7 @@ const HackathonsView = () => {
   return (
     <Center
       id="hackathons"
-      h="100vh"
+      minH="100vh"
       w="auto"
       flexDirection={"column"}
       scrollSnapAlign={"start"}
@@ -145,7 +145,7 @@ const HackathonsView = () => {
             icons={[SiAngular, SiFirebase]}
             navButton={buttons[0]}
             badge={badges[0]}
-          ></ProjectCard>
+          />
           <ProjectCard
             companyTitle="Huddle"
             description={
@@ -161,7 +161,7 @@ const HackathonsView = () => {
             icons={[SiAndroidstudio, SiHtml5, SiCss3]}
             navButton={buttons[1]}
             badge={badges[1]}
-          ></ProjectCard>
+          />
         </Flex>
       </Flex>
     </Center>
